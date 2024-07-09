@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/AdamBch/selenium-test-szkolenie.git'
+                git branch: 'main', url: 'https://github.com/AdamBch/srms-autotest-release.git'
             }
         }
         stage('Install Dependencies') {
