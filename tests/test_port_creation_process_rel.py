@@ -74,7 +74,7 @@ def test_port_creation_process_rel(browser):
     # Step 3 - Go to Operators -> Ports tab
     operators_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/app-sidebar/section/nav/div[5]/a/span")
     operators_button.click()
-    time.sleep(1)
+    time.sleep(2)
 
     # Step 4 - Click on Create button
     # find create port button and click on it
