@@ -73,7 +73,7 @@ def test_vessel_creation_process_rel(browser):
     time.sleep(2)
 
     # Step 3 - Go to Operators -> Vessels tab
-    operators_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/app-sidebar/section/nav/a[4]")
+    operators_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/app-sidebar/section/nav/div[5]/a/span")
     operators_button.click()
     time.sleep(1)
 
