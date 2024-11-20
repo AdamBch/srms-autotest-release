@@ -51,7 +51,7 @@ def test_vessel_creation_process_rel(browser):
     browser.get(srms_page)
     browser.maximize_window()
     # browser.set_window_size(1920, 1080)
-    assert browser.title == "Srms"
+    assert browser.title == "StockTrack"
     print(browser.title)
     time.sleep(2)
 
