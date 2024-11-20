@@ -79,11 +79,11 @@ def test_vessel_creation_process_rel(browser):
 
     vessels_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/section/app-operators/div/section/aside/app-secondary-menu-item[2]/a")
     vessels_button.click()
-    time.sleep(1) 
+    time.sleep(2) 
 
     # Step 4 - Click on Create button
     # find create vessel button and click on it
-    create_vessel_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/section/app-operators/div/section/section/app-vessels/div/div/button/span[4]")
+    create_vessel_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/section/app-operators/div/section/section/app-vessels/div/div/button/span[2]")
     create_vessel_button.click()
     time.sleep(2)
 
