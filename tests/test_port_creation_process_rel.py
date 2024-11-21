@@ -48,9 +48,10 @@ def browser():
 def test_port_creation_process_rel(browser):
     # Steps 1&2 - Login to SRMS as Master Admin
     browser.get(srms_page)
+    browser.set_window_size(1920, 1080)
     browser.maximize_window()
     #browser.set_window_size(1920, 1080)
-    assert browser.title == "StockTrack"
+    assert browser.title == "StockTrack - Log in"
     print(browser.title)
     time.sleep(2)
 
