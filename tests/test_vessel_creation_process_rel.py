@@ -38,8 +38,8 @@ def browser():
     service = Service(executable_path=driverPath)
     driver = webdriver.Chrome(service=service)
     yield driver
-    driver.maximize_window()
-    driver.set_window_size(1920,1080)
+    #driver.maximize_window()
+    #driver.set_window_size(1920,1080)
 
 # Vessel creation process - happy path
 
@@ -49,9 +49,9 @@ def browser():
 def test_vessel_creation_process_rel(browser):
     # Steps 1&2 - Login to SRMS as Master Admin
     browser.get(srms_page)
+    browser.set_window_size(1920, 1080)
     browser.maximize_window()
-    # browser.set_window_size(1920, 1080)
-    assert browser.title == "StockTrack"
+    assert browser.title == "StockTrack - Log in"
     print(browser.title)
     time.sleep(2)
 
@@ -84,6 +84,9 @@ def test_vessel_creation_process_rel(browser):
     # Step 4 - Click on Create button
     # find create vessel button and click on it
     create_vessel_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/section/app-operators/div/section/section/app-vessels/div/div/button/span[2]")
+    actions = ActionChains(browser)
+    actions.move_to_element(create_vessel_button).perform()
+    print("Element is visible? " + str(create_vessel_button.is_displayed()))
     create_vessel_button.click()
     time.sleep(2)
 
@@ -155,7 +158,7 @@ def test_vessel_creation_process_rel(browser):
 
     # Delete the vessel
     # Find and click on delete button
-    delete_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/section/app-operators/div/section/section/app-vessels/div/section/section/app-scroll-table/div/div/table/tbody/tr[1]/td[6]/div/span/button/span[3]")
+    delete_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/section/app-operators/div/section/section/app-vessels/div/section/section/app-scroll-table/div/div/table/tbody/tr/td[6]/div/span/button/mat-icon")
     delete_button.click()
     time.sleep(1)
 
