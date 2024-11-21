@@ -144,6 +144,8 @@ def test_port_creation_process_rel(browser):
     # Delete the port
     # Find and click on delete button
     delete_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/section/app-operators/div/section/section/app-ports/div/section/section/app-scroll-table/div/div/table/tbody/tr[1]/td[6]/div/span/button/mat-icon")
+    actions = ActionChains(browser)
+    actions.move_to_element(delete_button).perform()
     delete_button.click()
     time.sleep(1)
 
