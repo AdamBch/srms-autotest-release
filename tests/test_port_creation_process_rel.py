@@ -38,7 +38,7 @@ def browser():
     driver = webdriver.Chrome(service=service)
     yield driver
     #driver.maximize_window()
-    #driver.set_window_size(1920,1080)
+    #driver.set_window_size(1400,900)
 
 # Port creation process - happy path
 
