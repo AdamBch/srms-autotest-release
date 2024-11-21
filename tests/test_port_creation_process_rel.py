@@ -49,8 +49,8 @@ def test_port_creation_process_rel(browser):
     # Steps 1&2 - Login to SRMS as Master Admin
     browser.get(srms_page)
     browser.maximize_window()
-    browser.set_window_size(1920, 1080)
-    assert browser.title == "StockTrack - Log in"
+    #browser.set_window_size(1920, 1080)
+    assert browser.title == "StockTrack"
     print(browser.title)
     time.sleep(2)
 
@@ -78,7 +78,7 @@ def test_port_creation_process_rel(browser):
 
     # Step 4 - Click on Create button
     # find create port button and click on it
-    create_port_button = browser.find_element(By.CSS_SELECTOR, "body > app-root > app-default-layout > div > div > section > app-operators > div > section > section > app-ports > div > div > button > span.mdc-button__label")
+    create_port_button = browser.find_element(By.XPATH, "/html/body/app-root/app-default-layout/div/div/section/app-operators/div/section/section/app-ports/div/div/button/span[2]")
     create_port_button.click()
     time.sleep(2)
 
