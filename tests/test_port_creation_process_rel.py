@@ -81,6 +81,34 @@ def test_port_creation_process_rel(browser):
     # Step 4 - Click on Create button
     # find create port button and click on it
     create_port_button = browser.find_element(By.CSS_SELECTOR, "body > app-root > app-default-layout > div > div > section > app-operators > div > section > section > app-ports > div > div > button > span.mdc-button__label")
+    
+    actions = ActionChains(browser)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.perform()
+    time.sleep(1)
+    
+    actions = ActionChains(browser)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.perform()
+    time.sleep(1)
+
+    actions = ActionChains(browser)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.send_keys(Keys.ARROW_RIGHT)
+    actions.perform()
+    time.sleep(1)
+    
     print("Element is visible? " + str(create_port_button.is_displayed()))
     create_port_button.click()
     time.sleep(2)
