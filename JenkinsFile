@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                bat 'C:\\Users\\abanach\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pytest --html=report.html --alluredir=./allure-results'
+                bat 'C:\\Users\\abanach\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pytest --html-report=report.html --alluredir=./allure-results'
             }
         }
 
